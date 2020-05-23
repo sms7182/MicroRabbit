@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>FatalError.MicroRabbit.Infra.Bus</PackageId>
+    <Company>FatalError</Company>
+    <Product>FatalError.MicroRabbit.Infra.Bus</Product>
+    <Authors>sms7182</Authors>
   </PropertyGroup>
 
   <ItemGroup>
