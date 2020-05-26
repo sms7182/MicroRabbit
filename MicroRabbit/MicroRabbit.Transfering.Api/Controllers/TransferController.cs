@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MicroRabbit.Banking.Domain.Models;
 using MicroRabbit.Transfering.Application.Interfaces;
+using MicroRabbit.Transfering.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 

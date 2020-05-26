@@ -1,4 +1,5 @@
-﻿using MicroRabbit.Banking.Domain.Models;
+﻿
+using MicroRabbit.Transfering.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

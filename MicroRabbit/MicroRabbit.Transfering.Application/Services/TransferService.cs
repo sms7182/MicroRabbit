@@ -1,9 +1,9 @@
 ﻿
 
 using FatalError.Micro.Core.Bus;
-using MicroRabbit.Banking.Domain.Models;
 using MicroRabbit.Transfering.Application.Interfaces;
 using MicroRabbit.Transfering.Domain.Interfaces;
+using MicroRabbit.Transfering.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,6 +24,6 @@ namespace MicroRabbit.Transfering.Application.Services
             return transferRepository.GetTransferLogs();
         }
 
-        
+       
     }
 }
