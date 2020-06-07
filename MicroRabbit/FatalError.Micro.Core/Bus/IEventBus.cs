@@ -15,5 +15,12 @@ namespace FatalError.Micro.Core.Bus
         void Subscribe<T, TH>()
             where T : Event
             where TH : IEventHandler<T>;
+
+        void Subscribe<R, RH, T>()
+            where R :Event 
+            where RH : IEventHandler<R>
+            where T : Event;
+        void Reply<R>(R replyMessage) where R : Event;
+
     }
 }

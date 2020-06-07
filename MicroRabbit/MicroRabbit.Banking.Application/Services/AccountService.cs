@@ -28,6 +28,7 @@ namespace MicroRabbit.Banking.Application.Services
         {
             var createTransfer = new CreateTransferCommand(accountTransfer.FromAccount, accountTransfer.ToAccount, accountTransfer.TransferAmount);
             bus.SendCommand(createTransfer);
+            
         }
     }
 }

@@ -2,9 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FatalError.Micro.Core.Bus;
 using FatalError.Micro.Infra.IoC;
 using MediatR;
 using MicroRabbit.Banking.Data.Context;
+using MicroRabbit.Banking.Domain.EventHandlers;
+using MicroRabbit.Banking.Domain.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -73,7 +76,10 @@ namespace MicroRabbit.Banking.Api
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Banking Microservice V1");
             });
-           
+
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<TransferCreatedEventResponse, TransferEventReplyHandler,TransferCreatedEvent>();
+
         }
     }
 }

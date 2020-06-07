@@ -12,9 +12,11 @@ namespace MicroRabbit.Transfering.Domain.EventHandlers
     public class TransferEvenHandler : IEventHandler<TransferCreatedEvent>
     {
        readonly ITransferRepository transferRepository;
-        public TransferEvenHandler(ITransferRepository repository)
+        IEventBus eventBus;
+        public TransferEvenHandler(ITransferRepository repository,IEventBus e_ventBus)
         {
             transferRepository = repository;
+            eventBus = e_ventBus;
         }
         public Task Handle(TransferCreatedEvent @event)
         {
@@ -24,8 +26,10 @@ namespace MicroRabbit.Transfering.Domain.EventHandlers
                 AccountBalance = @event.Amount,
                 AccountTo = @event.To
             });
+            eventBus.Reply<TransferCreatedEventResponse>(new TransferCreatedEventResponse());
             return Task.CompletedTask;
         }
     }
+    
    
 }

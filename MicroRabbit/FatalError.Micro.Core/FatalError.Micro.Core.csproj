@@ -5,6 +5,8 @@
     <Authors>sms7182</Authors>
     <Company>FatalError</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/sms7182/MicroRabbit</RepositoryUrl>
+    <PackageTags>rabbitmq,mediatr</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

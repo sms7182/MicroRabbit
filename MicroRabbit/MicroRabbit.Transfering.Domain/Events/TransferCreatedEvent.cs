@@ -1,4 +1,5 @@
 ﻿
+using FatalError.Micro.Core.Commands;
 using FatalError.Micro.Core.Events;
 using System;
 using System.Collections.Generic;
@@ -18,5 +19,14 @@ namespace MicroRabbit.Transfering.Domain.Events
             To = to;
             Amount = amount;
         }
+    }
+    public class TransferCreatedEventResponse : Event
+    {
+        public TransferCreatedEventResponse()
+        {
+            Id = Guid.NewGuid();
+
+        }
+        public Guid Id { get; set; }
     }
 }
